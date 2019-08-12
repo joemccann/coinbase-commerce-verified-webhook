@@ -1,17 +1,20 @@
-require('dotenv').config()
 const { Webhook } = require('coinbase-commerce-node')
-const WEBHOOK_SECRET = process.env.COINBASE_COMMERCE_WEBHOOK_SECRET
 
 //
-// Assumes a request object with a stringified body and header as
-// the `X-CC-Webhook-Signature` header value.
+// Assumes a request object with a stringified body, the
+// `X-CC-Webhook-Signature` header, and your Coinbase Commerce
+// secret.
 //
 module.exports = (req) => {
   const {
     body,
     header,
-    secret = WEBHOOK_SECRET
+    secret
   } = req
+
+  if (!body) return { err: new Error('No body.') }
+  if (!header) return { err: new Error('No header.') }
+  if (!secret) return { err: new Error('No secret.') }
 
   let data = null
 

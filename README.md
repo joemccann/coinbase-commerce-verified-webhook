@@ -19,7 +19,7 @@ const verify = require('coinbase-commerce-verified-webhook')
 const req = {
   body: payload,
   header: headerSignature,
-  secret
+  secret: PROCESS.ENV.SECRET // or some other way of providing the secret
 }
 
 const { err, data } = verify(req)

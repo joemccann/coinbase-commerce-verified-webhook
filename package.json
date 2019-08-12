@@ -21,8 +21,7 @@
   },
   "homepage": "https://github.com/joemccann/coinbase-commerce-verified-webhook#readme",
   "dependencies": {
-    "coinbase-commerce-node": "^1.0.1",
-    "dotenv": "^8.0.0"
+    "coinbase-commerce-node": "^1.0.1"
   },
   "devDependencies": {
     "standard": "^13.1.0",
