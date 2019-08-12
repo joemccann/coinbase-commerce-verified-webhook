@@ -1,9 +1,10 @@
 {
   "name": "coinbase-commerce-verified-webhook",
   "version": "1.0.0",
-  "description": "Verify incoming requests are verified requests from Coinbase Commerce.",
+  "description": "🔒 Verify incoming requests are verified/signed requests from Coinbase Commerce.",
   "main": "index.js",
   "scripts": {
+    "pretest": "standard .",
     "test": "node test.js"
   },
   "repository": {
@@ -18,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/joemccann/coinbase-commerce-verified-webhook/issues"
   },
-  "homepage": "https://github.com/joemccann/coinbase-commerce-verified-webhook#readme"
+  "homepage": "https://github.com/joemccann/coinbase-commerce-verified-webhook#readme",
+  "dependencies": {
+    "coinbase-commerce-node": "^1.0.1",
+    "dotenv": "^8.0.0"
+  },
+  "devDependencies": {
+    "standard": "^13.1.0",
+    "tape": "^4.11.0"
+  }
 }
